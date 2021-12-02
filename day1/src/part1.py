@@ -8,8 +8,8 @@ with open(filename) as fn:
         ln = fn.readline()
         if ln:
             if (int(ln)-lint) > 0:
-                lncount+=1
-                print("increasing")
+                lncount += 1
+                print('increasing')
             else:
-                print("decreasing")
+                print('decreasing')
     print(lncount)
