@@ -2,12 +2,55 @@
 
 Solutions for advent of code 2021
 
-Using same conda environment as 2020
+Using same conda environment as 2020, see instructions below
 
 ```conda activate advent```
 
+### Requirements to use the code:
+
+- Create an environment
+
+```
+conda create --name advent python=python3.5
+```
+
+- install requirements
+
+```
+pip install -f requirements.txt
+```
+
+- Activate environment, enter the root of the repo, create a new day and begin coding
+
+```
+conda activate advent
+
+cookiecutter cookiecutter
+```
+
+### The resulting directory structure
+------------
+
+The directory structure of your new day created:
+
+```
+├── README.md          <- The top-level README for developers using this project.
+├── data
+│   ├── data.txt       <- Data from third party sources.
+│   └── sample.txt  <- Intermediate data that has been transformed.
+|
+├── notebooks          <- Jupyter notebooks.
+│
+└── src                 <- Source code for use in this project.
+    ├── part1.py      <- Python code for the first puzzle.
+    └── part2.py      <- Python code for the first puzzle.
+    └── test_code.py  <- Placeholder for tdd workflow
+
+```
+
+
 @todo
-- integrate cookie cutter from 2020
+- ~~integrate cookie cutter from 2020~~
 - ~~integrate flake8 linter and rules~~
 - create standard set of functions to parse data
 - ~~add requirements.txt~~

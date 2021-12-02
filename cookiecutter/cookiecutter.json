@@ -1,0 +1,6 @@
+{
+    "project_name": "project_name",
+    "repo_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+    "python_interpreter": "python3",
+    "description": "Advent of Code : {{ cookiecutter.project_name.lower().replace(' ', '_') }}"
+}
