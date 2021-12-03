@@ -6,7 +6,26 @@ Using same conda environment as 2020, see instructions below
 
 ```conda activate advent```
 
-### Requirements to use the code:
+## Using AOC cli tool
+
+- Install aoc tool for os of choice. Add to path
+
+- Navigate to the folder with executable
+
+- Run with correct year and day args, pipe to file of choice
+
+```
+aoc input --year 2021 --day 2 > ..\data.txt
+```
+
+- To get problem statement
+
+```
+aoc description --year 2021 --day 2
+```
+
+
+## Requirements to use the code:
 
 - Create an environment
 
@@ -28,7 +47,7 @@ conda activate advent
 cookiecutter cookiecutter
 ```
 
-### The resulting directory structure
+## The resulting directory structure
 ------------
 
 The directory structure of your new day created:
