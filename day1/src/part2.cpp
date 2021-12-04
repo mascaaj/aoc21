@@ -6,7 +6,7 @@
 using namespace std;
 
 vector<int> data;
-int count;
+int count, sum_vec_A, sum_vec_B;
 
 int readFile(string filename, vector<int>& vec)
 {
@@ -40,9 +40,34 @@ int increaseValues(vector<int> vec)
     return count;
 }
 
+int increaseValuesFiltered(vector<int> vec)
+{
+    int lhs, count;
+    count= 0;
+    vector<int>::iterator ptr,nptr,n2ptr;
+    lhs = vec.front();
+    n2ptr=ptr;
+    for(ptr = vec.begin()+1;n2ptr <= vec.end()-2; ptr++)
+    {
+        sum_vec_A,sum_vec_B = 0;
+        nptr = n2ptr = ptr;
+        advance(nptr,1);
+        advance(n2ptr,2);
+        sum_vec_A = lhs + *ptr + *nptr;
+        sum_vec_B = *ptr + *nptr + *n2ptr;
+        lhs=*ptr;
+        cout << sum_vec_A << "  " << sum_vec_B << endl;
+        if (sum_vec_B > sum_vec_A)
+        {
+            count = count + 1;
+        }
+    }
+    return count;
+}
+
 int main(int argc, char** argv){
 
-    readFile("../data/data.txt", data);
-    count = increaseValues(data);
+    readFile("../data/sample.txt", data);
+    count = increaseValuesFiltered(data);
     cout << count << endl;
 }
