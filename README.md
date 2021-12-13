@@ -69,7 +69,7 @@ The directory structure of your new day created:
 
 
 @todo
-- ~~integrate cookie cutter from 2020~~
-- ~~integrate flake8 linter and rules~~
 - create standard set of functions to parse data
-- ~~add requirements.txt~~
+- Review more efficient solution to day 8,12,13p2
+- day 12 part 2 : logic to allow one small cave to be visited twice
+- day 13 part 2 : bug, 2 letters do not render properly, had to guess within subset
