@@ -28,6 +28,33 @@ Single iterations operate on row or column indices. Iterating diagonally needs b
         print(i,j)
 ```
 
+## Sets
+
+### Existance of an item in viewed or visited items:
+
+Sets are implemented as hash tables. Lists are implemented as dynamic arrays, thus sets are faster to index thru.
+
+```
+    visited = set()
+    visited.add()
+    if (i,j) in visited:
+        do_something
+```
+
+## Heaps or Priority queues:
+
+### Usage and instantiation
+
+Use implementation of ```heapq``` library for priority queues. It operates on lists and can ```heappop```, ```heappush```, ```heappushpop```,```heapreplace```. It also supports n largest elements in priority queue using ```nlargest```, ```nsmallest```.
+
+Most of these methods have the syntax as 
+
+```
+    heapq.heappush(listinquestion, (x,y))
+    heapq.nlargest(3,listinquestion)
+    heapq.replace(listinquestion,2)
+```
+
 ## Lists
 
 ### List comprehension
@@ -79,6 +106,11 @@ This returns a weird list of arrays of i and j locations separately. These can b
     location_array = sorted(list(zip(*locations)))
 ```
 
+Locating elements above a threshold and operating on located elements:
+
+```
+    change_matrix = np.where(input_matrix <= 9, input_matrix, input_matrix-9)
+```
 ### Convert list of string to np.array of type int and reshape to size of choice
 
 If np array has string values, they can be cast to other types via ```astype()``` method. Here reshape places the array into a shape of choice.
@@ -93,6 +125,15 @@ There is probably a better way to specify the bins here, but the outcome is a li
 
 ```
     hist_elements = np.histogram(input_array, bins=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+```
+
+### Row and column stacking
+
+Duplicating np array and or column and row joining after operations
+
+```
+    expanded = np.hstack([x, x+1, x+2, x+3, x+4])
+    expanded = np.vstack([x, x+1, x+2, x+3, x+4])
 ```
 
 ## Pandas
