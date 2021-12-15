@@ -1,4 +1,4 @@
-""" Puzzle for dayX advent of code 2021
+""" Puzzle for day14 advent of code 2021
 """
 from collections import Counter
 
